@@ -12,6 +12,8 @@
 		EFD7CC2E1DDCDE790041FB72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD7CC2C1DDCDE790041FB72 /* Main.storyboard */; };
 		EFD7CC301DDCDE790041FB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD7CC2F1DDCDE790041FB72 /* Assets.xcassets */; };
 		EFD7CC331DDCDE790041FB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD7CC311DDCDE790041FB72 /* LaunchScreen.storyboard */; };
+		EFD7CC3B1DDE32BA0041FB72 /* CalculationTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7CC3A1DDE32BA0041FB72 /* CalculationTableTableViewController.swift */; };
+		EFD7CC3D1DDE32D80041FB72 /* CalculationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7CC3C1DDE32D80041FB72 /* CalculationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		EFD7CC2F1DDCDE790041FB72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFD7CC321DDCDE790041FB72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFD7CC341DDCDE790041FB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFD7CC3A1DDE32BA0041FB72 /* CalculationTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationTableTableViewController.swift; sourceTree = "<group>"; };
+		EFD7CC3C1DDE32D80041FB72 /* CalculationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				EFD7CC281DDCDE790041FB72 /* AppDelegate.swift */,
 				EFD7CC2A1DDCDE790041FB72 /* ViewController.swift */,
+				EFD7CC3A1DDE32BA0041FB72 /* CalculationTableTableViewController.swift */,
+				EFD7CC3C1DDE32D80041FB72 /* CalculationTableViewCell.swift */,
 				EFD7CC2C1DDCDE790041FB72 /* Main.storyboard */,
 				EFD7CC2F1DDCDE790041FB72 /* Assets.xcassets */,
 				EFD7CC311DDCDE790041FB72 /* LaunchScreen.storyboard */,
@@ -137,7 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFD7CC2B1DDCDE790041FB72 /* ViewController.swift in Sources */,
+				EFD7CC3B1DDE32BA0041FB72 /* CalculationTableTableViewController.swift in Sources */,
 				EFD7CC291DDCDE790041FB72 /* AppDelegate.swift in Sources */,
+				EFD7CC3D1DDE32D80041FB72 /* CalculationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +305,7 @@
 				EFD7CC391DDCDE790041FB72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
