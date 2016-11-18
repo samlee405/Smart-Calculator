@@ -14,8 +14,6 @@ class CalculationTableTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print(calculationsArray)
     }
 
     // MARK: - Table view data source

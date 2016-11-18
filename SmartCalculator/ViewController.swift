@@ -22,80 +22,14 @@ class ViewController: UIViewController {
         intializeView()
     }
     
-    func intializeView() {
-        calculationField.layer.borderWidth = 1.0
-        calculationField.layer.cornerRadius = 5.0
-    }
-    
     @IBAction func numberButtonPressed(_ sender: AnyObject) {
-        switch String(sender.tag) {
-            case "9": if let value = calculationField.text {
-                        calculationField.text = value + "9"
-                      }
-                      else {
-                          calculationField.text = "9"
-                      }
-            case "8": if let value = calculationField.text {
-                        calculationField.text = value + "8"
-                      }
-                      else {
-                        calculationField.text = "8"
-                      }
-            case "7": if let value = calculationField.text {
-                        calculationField.text = value + "7"
-                      }
-                      else {
-                        calculationField.text = "7"
-                      }
-            case "6": if let value = calculationField.text {
-                        calculationField.text = value + "6"
-                      }
-                      else {
-                        calculationField.text = "6"
-                      }
-            case "5": if let value = calculationField.text {
-                        calculationField.text = value + "5"
-                      }
-                      else {
-                        calculationField.text = "5"
-                      }
-            case "4": if let value = calculationField.text {
-                        calculationField.text = value + "4"
-                      }
-                      else {
-                        calculationField.text = "4"
-                      }
-            case "3": if let value = calculationField.text {
-                        calculationField.text = value + "3"
-                      }
-                      else {
-                        calculationField.text = "3"
-                      }
-            case "2": if let value = calculationField.text {
-                        calculationField.text = value + "2"
-                      }
-                      else {
-                        calculationField.text = "2"
-                      }
-            case "1": if let value = calculationField.text {
-                        calculationField.text = value + "1"
-                      }
-                      else {
-                        calculationField.text = "1"
-                      }
-            case "0": if let value = calculationField.text {
-                        calculationField.text = value + "0"
-                      }
-                      else {
-                        calculationField.text = "0"
-                      }
-            case "0": if let value = calculationField.text {
-                        calculationField.text = value + "0"
-                      }
-                      else {
-                        calculationField.text = "0"
-                      }
-            default: break
+        if calculationDone {
+            calculationDone = false
+            calculationField.text = nil
+            appendNumber(value: String(sender.tag))
+        }
+        else {
+            appendNumber(value: String(sender.tag))
         }
     }
     @IBAction func operationButtonPressed(_ sender: AnyObject) {
@@ -198,10 +132,95 @@ class ViewController: UIViewController {
         valuesArray = [] //reinitialize the array for future operations
     }
     
+    func intializeView() {
+        calculationField.layer.borderWidth = 1.0
+        calculationField.layer.cornerRadius = 5.0
+    }
+    
+    func appendNumber(value: String) {
+        switch value {
+        case "9": if let value = calculationField.text {
+            calculationField.text = value + "9"
+        }
+        else {
+            calculationField.text = "9"
+            }
+        case "8": if let value = calculationField.text {
+            calculationField.text = value + "8"
+        }
+        else {
+            calculationField.text = "8"
+            }
+        case "7": if let value = calculationField.text {
+            calculationField.text = value + "7"
+        }
+        else {
+            calculationField.text = "7"
+            }
+        case "6": if let value = calculationField.text {
+            calculationField.text = value + "6"
+        }
+        else {
+            calculationField.text = "6"
+            }
+        case "5": if let value = calculationField.text {
+            calculationField.text = value + "5"
+        }
+        else {
+            calculationField.text = "5"
+            }
+        case "4": if let value = calculationField.text {
+            calculationField.text = value + "4"
+        }
+        else {
+            calculationField.text = "4"
+            }
+        case "3": if let value = calculationField.text {
+            calculationField.text = value + "3"
+        }
+        else {
+            calculationField.text = "3"
+            }
+        case "2": if let value = calculationField.text {
+            calculationField.text = value + "2"
+        }
+        else {
+            calculationField.text = "2"
+            }
+        case "1": if let value = calculationField.text {
+            calculationField.text = value + "1"
+        }
+        else {
+            calculationField.text = "1"
+            }
+        case "0": if let value = calculationField.text {
+            calculationField.text = value + "0"
+        }
+        else {
+            calculationField.text = "0"
+            }
+        case "22": let number = calculationField.text!
+        var decimalExists = false
+        for character in number.characters {
+            if character == "." {
+                decimalExists = true
+            }
+        }
+        if !decimalExists {
+            if let value = calculationField.text {
+                calculationField.text = value + "."
+            }
+            else {
+                calculationField.text = "."
+            }
+            }
+        default: break
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as! CalculationTableTableViewController
         destination.calculationsArray = calculationsToSendArray
-        print(destination.calculationsArray)
     }
 }
 
